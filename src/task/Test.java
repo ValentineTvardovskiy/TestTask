@@ -6,7 +6,7 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-        
+
         // 1
         List<Student> students = new ArrayList<>();
         students.add(new Student("Valery", "Popov"));
@@ -27,7 +27,7 @@ public class Test {
         List<Mark> marks = new ArrayList<>();
         for (Student student : students) {
             for (Subject subject : subjects) {
-                if (student.getFirstName() == "Maria" && (subject.getName() == "History" || !subject.isMandatory())) {
+                if (student.getFirstName() == "Maria" && (subject.getName() == "History" || subject.getName() == "Ethics")) {
                     marks.add(new Mark(student, subject, 5));
                 }
                 else if (subject.isMandatory()) {
